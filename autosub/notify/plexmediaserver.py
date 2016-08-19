@@ -9,7 +9,7 @@ from xml.etree import ElementTree as ET
 log = logging.getLogger('thelogger')
 
 def test_update_library(plexserverhost, plexserverport, plexserverusername, plexserverpassword):
-    log.info("Plex Media Server: Trying to update the TV shows library.")
+    log.info("plexmediaserver: Trying to update the TV shows library.")
     plexservertoken = None
     if autosub.PLEXSERVERTOKEN:
         plexservertoken = autosub.PLEXSERVERTOKEN
@@ -17,7 +17,7 @@ def test_update_library(plexserverhost, plexserverport, plexserverusername, plex
     return _update_library(plexserverhost, plexserverport, plexserverusername, plexserverpassword, plexservertoken)
 
 def send_update_library():
-    log.info("Plex Media Server: Trying to update the TV shows library.")
+    log.info("plexmediaserver: Trying to update the TV shows library.")
     plexserverhost = autosub.PLEXSERVERHOST
     plexserverport = int(autosub.PLEXSERVERPORT)
     plexserverusername = autosub.PLEXSERVERUSERNAME
